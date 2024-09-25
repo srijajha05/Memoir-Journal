@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require('express');
 const app = express();
 const userModel = require('./models/user');
@@ -124,4 +126,4 @@ function isLoggedIn(req,res,next){
    next();
 }
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT);
